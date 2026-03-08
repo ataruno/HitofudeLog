@@ -3,6 +3,7 @@ node_modules/
 
 # VS Code extension package (build artifacts)
 *.vsix
+*.mp4
 
 # Logs
 npm-debug.log*
