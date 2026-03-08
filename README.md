@@ -4,16 +4,4 @@
 
 エディタ画面でカーソル選択した箇所をコマンドラインへ流し込むことも可能です。  
 
-
-HitofudeLog.Add
-HitofudeLog.Send
-HitofudeLog.Open
-
-
-## Extension Settings
-
-
-## Release Notes
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
+![](./README_image/HitofudeLog.mp4)
