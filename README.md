@@ -4,4 +4,4 @@
 
 エディタ画面でカーソル選択した箇所をコマンドラインへ流し込むことも可能です。  
 
-![](./README_image/HitofudeLog.mp4)
+![](./README_image/HitofudeLog.webp)
