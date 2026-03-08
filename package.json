@@ -1,0 +1,81 @@
+{  
+  "name": "HitofudeLog",
+  "displayName": "HitofudeLog",
+  "description": "Let's write a log!",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.108.1"
+  },
+  "categories": [
+    "Other"
+  ],
+  "publisher": "ataruno",
+  "activationEvents": [],
+  "main": "./extension.js",
+  "icon": "HitofudeLog.png",
+  "contributes": {
+    "commands": [
+      {
+        "command": "HitofudeLog.Add",
+        "title": "HitofudeLog.Add:追記する"
+      },
+      {
+        "command": "HitofudeLog.Send",
+        "title": "HitofudeLog.Send:カーソル選択箇所を追記する"
+      },
+      {
+        "command": "HitofudeLog.Open",
+        "title": "HitofudeLog.Open:書き込み先のファイルを開く"
+      }
+    ],
+    "configuration":{
+      "type": "object",
+      "title": "HitofudeLog",
+      "properties": {
+        "HitofudeLog.targetPath": {
+          "type": "string",
+          "markdownDescription" : "追記先のMarkdownファイルの絶対パス。例:C:/Users/Desktop/日報.md"
+        },
+        "HitofudeLog.prependDateHeader": {
+        "type": "boolean",
+        "markdownDescription" : "追記ブロック先頭に日付見出し(#·YYYY-MM-DD')を付ける",
+        "default": true
+        },
+        "HitofudeLog.addDivider": {
+        "type": "boolean",
+        "markdownDescription" : "各エントリの末尾に区切り線を入れる",
+        "default": false
+        },
+        "HitofudeLog.dividerText": {
+        "type": "string",
+        "markdownDescription" : "区切り線の文字列('addDivider'が·true·のとき使用)",
+        "default": " --- "
+        },
+        "HitofudeLog.categories": {
+        "type": "array",
+        "items": { "type": "string" },
+        "default": [
+          "わからん🤔",
+          "わかった🎉",
+          "トライ💪"
+        ],
+        "markdownDescription": "カテゴリ一覧の設定(上から順)",
+        "scope": "window"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "pnpm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.108.1",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "eslint": "^9.39.2",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
