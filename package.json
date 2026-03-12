@@ -2,12 +2,19 @@
   "name": "HitofudeLog",
   "displayName": "HitofudeLog",
   "description": "Let's write a log!",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.108.1"
   },
   "categories": [
     "Other"
+  ],
+  "keywords": [
+    "markdown",
+    "logging",
+    "journal",
+    "utility",
+    "devlog"
   ],
   "repository": {
     "type": "git",
